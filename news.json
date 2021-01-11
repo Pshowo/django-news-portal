@@ -1,0 +1,26 @@
+[
+  {
+    "created": "2020-02-22 16:40:00",
+    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed convallis eros id ornare rhoncus. Pellentesque faucibus consequat elit eu posuere. Aenean dapibus, neque eu aliquet porttitor, mauris nisi pretium ligula, at hendrerit odio tortor sed nisi. Quisque nisl sapien, dapibus eget dignissim vitae, laoreet a felis.",
+    "title": "First news.",
+    "link": 1
+  },
+  {
+    "created": "2020-02-22 11:20:00",
+    "text": "Quisque blandit enim sed ligula commodo, sit amet ornare eros aliquam. Vivamus dictum mauris ac lectus sodales, at mattis velit luctus. Suspendisse in diam ac ipsum venenatis vestibulum. Maecenas commodo eu turpis in accumsan. Nunc pharetra diam eu arcu volutpat laoreet. ",
+    "title": "Auctor at est sit amet.",
+    "link": 2
+  },
+  {
+    "created": "2020-01-12 16:40:00",
+    "text": "Nunc turpis tortor, egestas non sem non, dignissim efficitur tortor. Pellentesque consectetur ac ante faucibus ultrices. Integer nec libero pellentesque, hendrerit neque eget, auctor ante. Vestibulum cursus cursus leo nec pretium. Aliquam dictum finibus facilisis.",
+    "title": "Pellentesque volutpat, tellus at eleifend.",
+    "link": 3
+  },
+  {
+    "created": "2020-02-22 16:40:00",
+    "text": "A new star appeared in the sky.",
+    "title": "A star is born",
+    "link": 9234732
+  }
+]

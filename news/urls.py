@@ -1,7 +1,8 @@
 from django.urls import path
-from django.urls import include
 from . import views
 
 urlpatterns = [
-    path('', views.MainPageView.as_view())
+    path('', views.MainPageView.as_view()),
+    path('news/', views.News.as_view()),
+    path('news/<int:link>/', views.article),
 ]

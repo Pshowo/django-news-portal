@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h2>Hyper news</h2>
+    <hr>
+    {% for date in set_|dictsortreversed:"day"|dictsortreversed:"month"|dictsortreversed:"year"%}
+        <h4>{{date|date:"Y-m-d"}}</h4>
+        <ul>
+            {% for article in all_articles %}
+
+                    {% if article.created.year == date.year and article.created.month == date.month and article.created.day == date.day%}
+                        <li><a href="/news/{{article.link}}/">{{ article.title }}</a></li>
+                    {% endif %}
+
+            {% endfor %}
+        </ul>
+    {% endfor %}
+
+    <a href="/news/create/">Create news</a>
+</body>
+</html>
