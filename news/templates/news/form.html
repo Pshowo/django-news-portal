@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Create article</title>
+</head>
+<body>
+    <h2>Create new article:</h2>
+    <form method="post" action="/news/create/"> {% csrf_token%}
+        <label>Article title: </label></br>
+        <input name="title"><br>
+
+        <label>Text: </label></br>
+        <textarea name="text" rows="5" cols="22"></textarea></br></br>
+        <button type="submit"> Prześlij </button>
+    </form>
+    </br>
+    </br>
+    <a target="_blank" target="_blank" href="/news/">Main page</a>
+
+</body>
+</html>

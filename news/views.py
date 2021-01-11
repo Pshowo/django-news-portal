@@ -1,8 +1,25 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.views import View
 from django.conf import settings
 import json
 import datetime
+
+
+def write_data_JSON(data):
+    """ Write data to the file"""
+    with open(settings.NEWS_JSON_PATH, "w") as file:
+        json.dump(data, file, indent=0)
+
+
+def get_unit_link(data):
+    """ Return uniqe id for the new articles """
+    links = []
+    for i in data:
+        links.append(int(i['link']))
+
+    links = list(set(links))
+    links.sort()
+    return links.pop()+1
 
 
 # Create your views here.
@@ -17,6 +34,34 @@ class News(View):
     def get(self, request, *args, **kwargs):
         data, set_data = get_data()
         return render(request, 'news/news.html', {"all_articles": data, "set_":set_data})
+
+
+class Create(View):
+
+    def get(self, request, *args, **kwargs):
+        return render(request, 'news/form.html', )
+
+    def post(self, request, *args, **kwargs):
+        with open(settings.NEWS_JSON_PATH, 'r') as file:
+            data = json.load(file)
+        link = get_unit_link(data)
+        title = request.POST.get('title')
+        text = request.POST.get('text')
+        created = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+
+        new_article = {
+            "created": created,
+            "text": text,
+            "title": title,
+            "link": link
+        }
+        print(new_article)
+        data.append(new_article)
+        print(data)
+        write_data_JSON(data)
+
+        print(new_article)
+        return redirect("/news/")
 
 
 def article(request, link):
@@ -37,7 +82,6 @@ def get_data():
     for date in data:
         date_ = date['created'].split(' ')[0]
         time_ = date['created'].split(' ')[1]
-        print(date_, time_)
         Y = int(date_.split("-")[0])
         M = int(date_.split("-")[1])
         d = int(date_.split("-")[2])

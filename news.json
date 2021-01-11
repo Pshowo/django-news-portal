@@ -1,26 +1,62 @@
 [
-  {
-    "created": "2020-02-22 16:40:00",
-    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed convallis eros id ornare rhoncus. Pellentesque faucibus consequat elit eu posuere. Aenean dapibus, neque eu aliquet porttitor, mauris nisi pretium ligula, at hendrerit odio tortor sed nisi. Quisque nisl sapien, dapibus eget dignissim vitae, laoreet a felis.",
-    "title": "First news.",
-    "link": 1
-  },
-  {
-    "created": "2020-02-22 11:20:00",
-    "text": "Quisque blandit enim sed ligula commodo, sit amet ornare eros aliquam. Vivamus dictum mauris ac lectus sodales, at mattis velit luctus. Suspendisse in diam ac ipsum venenatis vestibulum. Maecenas commodo eu turpis in accumsan. Nunc pharetra diam eu arcu volutpat laoreet. ",
-    "title": "Auctor at est sit amet.",
-    "link": 2
-  },
-  {
-    "created": "2020-01-12 16:40:00",
-    "text": "Nunc turpis tortor, egestas non sem non, dignissim efficitur tortor. Pellentesque consectetur ac ante faucibus ultrices. Integer nec libero pellentesque, hendrerit neque eget, auctor ante. Vestibulum cursus cursus leo nec pretium. Aliquam dictum finibus facilisis.",
-    "title": "Pellentesque volutpat, tellus at eleifend.",
-    "link": 3
-  },
-  {
-    "created": "2020-02-22 16:40:00",
-    "text": "A new star appeared in the sky.",
-    "title": "A star is born",
-    "link": 9234732
-  }
+{
+"created": "2020-02-22 16:40:00",
+"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed convallis eros id ornare rhoncus. Pellentesque faucibus consequat elit eu posuere. Aenean dapibus, neque eu aliquet porttitor, mauris nisi pretium ligula, at hendrerit odio tortor sed nisi. Quisque nisl sapien, dapibus eget dignissim vitae, laoreet a felis.",
+"title": "First news.",
+"link": 1
+},
+{
+"created": "2020-02-22 11:20:00",
+"text": "Quisque blandit enim sed ligula commodo, sit amet ornare eros aliquam. Vivamus dictum mauris ac lectus sodales, at mattis velit luctus. Suspendisse in diam ac ipsum venenatis vestibulum. Maecenas commodo eu turpis in accumsan. Nunc pharetra diam eu arcu volutpat laoreet. ",
+"title": "Auctor at est sit amet.",
+"link": 2
+},
+{
+"created": "2020-01-12 16:40:00",
+"text": "Nunc turpis tortor, egestas non sem non, dignissim efficitur tortor. Pellentesque consectetur ac ante faucibus ultrices. Integer nec libero pellentesque, hendrerit neque eget, auctor ante. Vestibulum cursus cursus leo nec pretium. Aliquam dictum finibus facilisis.",
+"title": "Pellentesque volutpat, tellus at eleifend.",
+"link": 3
+},
+{
+"created": "2020-02-22 16:40:00",
+"text": "A new star appeared in the sky.",
+"title": "A star is born",
+"link": 9234732
+},
+{
+"created": "2021-01-11 21:21:14",
+"text": "We want to add another json data after emp_details. Below is the implementation.",
+"title": "moj testowy tytu\u0142",
+"link": "9234733"
+},
+{
+"created": "2021-01-11 21:22:09",
+"text": "We want to add another json data after emp_details. Below is the implementation.",
+"title": "moj testowy tytu\u0142",
+"link": "9234734"
+},
+{
+"created": "2021-01-11 21:34:09",
+"text": "asdsda",
+"title": "asd",
+"link": 9234735
+},
+{
+"created": "2021-01-11 21:34:29",
+"text": "asfafawfw",
+"title": "sample ",
+"link": 9234736
+},
+{
+"created": "2021-01-11 21:40:22",
+"text": "Super dzia\u0142a Django!",
+"title": "Nowy news",
+"link": 9234737
+},
+{
+"created": "2021-01-11 21:43:18",
+"text": "sfsdg",
+"title": "asd",
+"link": 9234738
+}
 ]
