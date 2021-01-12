@@ -3,23 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+
 </head>
 <body>
     <h2>Hyper news</h2>
+    <div>
+        <form method="get" action="">
+            {% csrf_token %}
+            <input type="text" placeholder="Search" name="q">
+        </form>
+        {% if query is not None %}
+            <a a href="/news/">Back</a>
+        {% endif %}
+    </div>
     <hr>
     {% for date in set_|dictsortreversed:"day"|dictsortreversed:"month"|dictsortreversed:"year"%}
         <h4>{{date|date:"Y-m-d"}}</h4>
         <ul>
             {% for article in all_articles %}
-
+                {% if query is None %}
                     {% if article.created.year == date.year and article.created.month == date.month and article.created.day == date.day%}
                         <li><a href="/news/{{article.link}}/">{{ article.title }}</a></li>
                     {% endif %}
+                {% else %}
+                    {% if article.created.year == date.year and article.created.month == date.month and article.created.day == date.day%}
+                        <li><a href="/news/{{article.link}}/">{{ article.title }}</a></li>
+                    {% endif %}
+                {% endif %}
 
             {% endfor %}
         </ul>
     {% endfor %}
-
+    </br>
     <a href="/news/create/">Create news</a>
 </body>
 </html>

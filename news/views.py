@@ -22,6 +22,19 @@ def get_unit_link(data):
     return links.pop()+1
 
 
+def search(string, data):
+    new_data = []
+    for i in data:
+        if string.lower() in (i['title'].lower()):
+            new_data.append(i)
+    set_date = []
+    for a in data:
+        DATE = datetime.date(a['created'].year, a['created'].month, a['created'].day)
+        set_date.append(DATE)
+    set_date = list(set(set_date))
+    return new_data, set_date
+
+
 # Create your views here.
 class MainPageView(View):
 
@@ -33,7 +46,11 @@ class News(View):
 
     def get(self, request, *args, **kwargs):
         data, set_data = get_data()
-        return render(request, 'news/news.html', {"all_articles": data, "set_":set_data})
+        q = request.GET.get('q')
+        if q:
+            data = search(q, data)[0]
+            set_data = search(q, data)[1]
+        return render(request, 'news/news.html', {"all_articles": data, "set_": set_data, 'query': q})
 
 
 class Create(View):
